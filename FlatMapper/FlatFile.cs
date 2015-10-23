@@ -46,6 +46,11 @@ namespace FlatMapper
         {
         }
 
+        public FlatFile(Layout<T> layout, Stream innerStream, System.Text.Encoding encoding)
+            : this(layout, innerStream, encoding, DefaultThrowExceptionOnReadError)
+        {
+        }
+
         public FlatFile(Layout<T> layout, Stream innerStream)
             : this(layout, innerStream, DefaultThrowExceptionOnReadError)
         {
